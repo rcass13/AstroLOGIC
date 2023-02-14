@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Astrology Signs Bar Chart</title>
+<link rel='stylesheet' href='style.css' type='text/css' />
+</head>
+<body>
+    <div class="phppot-container">
+        <h1>Astrology Signs Bar Chart</h1>
+        <div>
+            <canvas id="horizontal-bar-chart"></canvas>
+        </div>
+    </div>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+    <script>
+        new Chart(document.getElementById("horizontal-bar-chart"), {
+            type: 'bar',
+            data: {
+                labels: ["Aries", "Taurus", "Gemini", "Cancer","Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn","Aquarius", "Pisces"],
+                datasets: [{
+                    label: "Signs",
+                    backgroundColor: ["Red", "Green",
+                        "Blue", "Silver", "Yellow", "Green", "Blue","Black","Orange","Brown","Blue","Lavender"
+                    ],
+                    data: [2, 4, 2, 1, 3, 5, 2, 4, 2, 1, 3, 5]
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: 'Astrology Signs Bar Chart'
+                }
+            }
+        });
+    </script>
+</body>
+</html>
